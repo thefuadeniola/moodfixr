@@ -13,21 +13,16 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        "black-100": "#2B2C35",
+        "white": "#FFFFFF",
         "primary-blue": {
-          DEFAULT: "#2B59FF",
+          DEFAULT: "#046380",
           100: "#F5F8FF",
-        },
-        "secondary-orange": "#f79761",
-        "light-white": {
-          DEFAULT: "rgba(59,60,152,0.03)",
-          100: "rgba(59,60,152,0.02)",
         },
         grey: "#747A88",
       },
       backgroundImage: {
+        'hero-bg': "url('/assets/bg.jpg')",
         'pattern': "url('/pattern.png')",
-        'hero-bg': "url('/hero-bg.png')"
       }
 
     },

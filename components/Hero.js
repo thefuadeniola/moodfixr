@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Hero = () => {
     return (
@@ -10,7 +11,9 @@ const Hero = () => {
                 <p className='text-[27px] text-black-100 font-light mt-5'>
                     Fix your mood with a mix of our human and AI tested algorithm.
                 </p>
-                <Button title='Explore Cars' type='button' text='Get Me Fixed' />
+                <Link href='/mood'>
+                    <Button title='Explore Cars' type='button' text='Get Me Fixed' buttonStyles={'mt-8'} />
+                </Link>
             </div>
             <div className='flex-[1.5] flex justify-end items-end w-full xl:h-screen'>
                 <div className='hero__image'>

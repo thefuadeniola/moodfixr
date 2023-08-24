@@ -7,15 +7,14 @@ export default function Navbar() {
     return (
         <div className='max-w-[1440px] mx-auto justify-between sm:px-16 px-6 py-4 navbar relative shadow-sm m-auto flex flex-row space-x-8 items-center'>
             <div className='logo flex space-x-2 tracking-tight'>
-                <h1 className='logo-text font-extrabold text-lg'>MOODFixr</h1>
-                <Image src='/assets/logo.png' alt='Logo Image' height={28} width={28} />
+                <Image src='/assets/logo-no-background.svg' width={100} height={30} />
             </div>
             <div className='flex flex-row space-x-4 items-center'>
                 <Link href='/signin'>
                     <span>Sign In</span>
                 </Link>
                 <Link href='/signup'>
-                    <Button type='button' text='Sign Up' onClick={() => { }} />
+                    <Button type='button' text='Sign Up' onClick={() => { }} buttonStyles={''} />
                 </Link>
             </div>
         </div>
