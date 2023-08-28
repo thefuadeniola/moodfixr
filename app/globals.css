@@ -37,5 +37,17 @@ body {
 }
 
 .button {
-  border-radius: 5px;
+  border-radius: 30px;
+}
+
+.herobg {
+  border-radius: 8px;
+}
+
+.card {
+  height: 200px;
+  width: auto;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 24px;
 }

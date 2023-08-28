@@ -1,4 +1,21 @@
-const preferredMedia = [
+export const steps = [
+    {
+        name: 'Complete Questionnaire',
+        image: '/assets/form.png',
+        description: 'Complete the questionnaire to best describe how you feel'
+    },
+    {
+        name: 'Trust the Process',
+        image: '/assets/process.png',
+        description: 'Let the algorithm run on your results'
+    },
+    {
+        name: 'Soothe Yourself',
+        image: '/assets/media.png',
+        description: 'Enjoy your preferred media tailored to fix your mood'
+    }
+]
+export const preferredMedia = [
     {
         id: 'books',
         name: 'Books'
@@ -14,9 +31,9 @@ const preferredMedia = [
 
 ]
 
-const baseMoods = [
+export const baseMoods = [
     {
-        base: 'Positive',
+        base: 'Feeling Positive',
         id: 'positive',
         questions: {
             happy: "My current situation or the outcome of a recent situation",
@@ -31,7 +48,7 @@ const baseMoods = [
             sad: "My current situation or the outcome of a recent situation",
             nostalgic: "Is it something you miss or are reminiscent of",
             lonely: "Do you feel alone mostly and like you have do deal with things yourself",
-            empowered: "Down and in need of motivation"
+            empowered: "Down in need of motivation"
         }
     },
     {

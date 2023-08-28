@@ -1,13 +1,18 @@
-import Image from 'next/image'
 import Hero from '@/components/Hero'
+import Steps from '@/components/Steps'
 import FormSection from '@/components/FormSection'
 import QuoteSection from '@/components/QuoteSection'
 import Results from '@/components/Results'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Hero />
+    <main className="min-h-screen">
+      <header className='h-screen'>
+        <Navbar />
+        <Hero />
+      </header>
+      <Steps />
       <FormSection />
       <QuoteSection />
       <Results />

@@ -16,9 +16,12 @@ module.exports = {
         "white": "#FFFFFF",
         "primary-blue": {
           DEFAULT: "#046380",
-          100: "#F5F8FF",
+          100: "5ACCCC",
+          200: "#3988C8",
+
         },
         grey: "#747A88",
+        gradient: "#C4E271"
       },
       backgroundImage: {
         'hero-bg': "url('/assets/bg.jpg')",
@@ -29,3 +32,4 @@ module.exports = {
   },
   plugins: [],
 }
+// #5DC5DE
