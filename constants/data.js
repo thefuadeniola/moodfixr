@@ -28,6 +28,10 @@ export const preferredMedia = [
         id: 'podcast',
         name: 'Podcast'
     },
+    {
+        id: 'videos',
+        name: 'Videos'
+    }
 
 ]
 
@@ -203,3 +207,90 @@ const mappedMoods = [
 
     //, "frustrated", "angry", "nostalgic", "lonely", "sad","relaxed", "happy", "empowered", "optimistic"
 ]
+
+export const podcastOptions = {
+    stressed: [
+        "The Stress Less Show",
+        "The Overwhelmed Brain"
+    ],
+    frustrated: [
+        "UnF*ck Your Brain",
+        "The Life Coach School Podcast"
+    ],
+    angry: [
+        "Angry Americans",
+        "The Angry Therapist Podcast"
+    ],
+    nostalgic: [
+        "The Nostalgia Trap",
+        "Rewind with Alex Kapelman"
+    ],
+    lonely: [
+        "The Loneliness Lab",
+        "The Friendshipping Podcast"
+    ],
+    sad: [
+        "The Griefcast",
+        "Terrible, Thanks for Asking"
+    ],
+    relaxed: [
+        "Sleepy",
+        "Meditative Story"
+    ],
+    happy: [
+        "The Happiness Lab",
+        "The Tony Robbins Podcast",
+        "The Moth"
+    ],
+    empowered: [
+        "The School of Greatness",
+        "She Explores",
+        "How I Built This",
+        "TED Talks Daily"
+    ],
+    optimistic: [
+        "The Positive Psychology Podcast",
+        "The Tim Ferriss Show"
+    ],
+    anxious: [
+        "The Anxiety Coaches Podcast",
+        "The Calmer You Podcast"
+    ]
+}
+
+export const artisteOptions = {
+    stressed: [
+        "Ludovico Einaudi", "Max Richter", "Olafur Arnalds", "Yiruma", "Nils Frahm"
+    ],
+    frustrated: [
+        "Alanis Morissette", "Nine Inch Nails", "Limp Bizkit", "Papa Roach", "Korn"
+    ],
+    angry: [
+        "Linkin Park", "Rage", "Against The Machine", "Slipknot", "Eminem", "System of a Down"
+    ],
+    nostalgic: [
+        "The Beatles", "Michael Jackson", "Queen", "ABBA", "Elvis Presley"
+    ],
+    lonely: [
+        "Adele", "Ed Sheeran", "Lana Del Rey", "Bill Withers", "Leonard Cohen"
+    ],
+    sad: [
+        "Adele", "Sam Smith", "Lewis Capaldi", "Billie Eilish", "James Arthur"
+    ],
+    relaxed: [
+        "Jack Johnson", "Norah Jones", "John Mayer", "Ben Howard", "José González"
+    ],
+    happy: [
+        "Pharrell Williams", "Bruno Mars", "Meghan Trainor", "Jason Mraz", "Maroon 5"
+    ],
+    empowered: [
+        "Beyoncé", "Alicia Keys", "Destiny's Child", "Demi Lovato", "Christina Aguilera"
+    ],
+    optimistic: [
+        "Coldplay", "OneRepublic", "Imagine Dragons", "Taylor Swift", "U2"
+    ],
+    anxious: [
+        "Bon Iver", "Radiohead", "Sigur Rós", "Enya", "Explosions in the Sky"
+    ]
+
+}

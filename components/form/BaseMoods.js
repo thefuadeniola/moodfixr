@@ -1,19 +1,20 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { baseMoods } from '@/constants/data'
 import Questions from './Questions'
+import { useFormContext } from '@/context/formContext'
 
 const BaseMoods = () => {
-    const [selected, setSelected] = useState('Choose an option')
+    const { base, setBase } = useFormContext()
     return (
         <div className='flex flex-col'>
             <div className="w-full max-w-md mx-auto mt-8">
                 <Listbox
                     as="div"
                     className="space-y-1"
-                    value={selected}
-                    onChange={setSelected}
+                    value={base}
+                    onChange={setBase}
                 >
                     {({ open }) => (
                         <>
@@ -23,7 +24,7 @@ const BaseMoods = () => {
                             <div className="relative">
                                 <span className="inline-block w-full rounded-md shadow-sm">
                                     <Listbox.Button className="cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                                        <span className="block truncate">{selected}</span>
+                                        <span className="block truncate">{base}</span>
                                         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                                             <svg
                                                 className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
@@ -83,8 +84,8 @@ const BaseMoods = () => {
             </div>
 
             {
-                selected !== 'Choose an option' &&
-                <Questions base={selected} />
+                base !== 'Choose an option' &&
+                <Questions base={base} />
             }
         </div>
     )

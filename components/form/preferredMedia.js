@@ -1,17 +1,18 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { preferredMedia } from '@/constants/data'
+import { useFormContext } from '@/context/formContext'
 
 const PreferredMedia = () => {
-    const [selected, setSelected] = useState('Books')
+    const { media, setMedia } = useFormContext()
     return (
         <div className="w-full max-w-md mx-auto">
             <Listbox
                 as="div"
                 className="space-y-1"
-                value={selected}
-                onChange={setSelected}
+                value={media}
+                onChange={setMedia}
             >
                 {({ open }) => (
                     <>
@@ -21,7 +22,7 @@ const PreferredMedia = () => {
                         <div className="relative">
                             <span className="inline-block w-full rounded-md shadow-sm">
                                 <Listbox.Button className="cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                                    <span className="block truncate">{selected}</span>
+                                    <span className="block truncate">{media}</span>
                                     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                                         <svg
                                             className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">

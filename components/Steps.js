@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { steps } from '@/constants/data'
 
 const Steps = () => {
-    // Add a fugazi slider to explain the level of the mood (of course we won't be using that hehehe)
     return (
         <div className='h-screen bg-primary-blue-200 p-24'>
             <div className='flex flex-col justify-center text-center'>

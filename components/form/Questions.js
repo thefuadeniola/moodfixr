@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { baseMoods } from '@/constants/data'
-import Slider from './Slider'
+import SliderComponent from './Slider'
+import { useFormContext } from '@/context/formContext'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const Questions = ({ base }) => {
-    const [selected, setSelected] = useState('Choose an Option')
+    const { question, setQuestion } = useFormContext()
 
     const fetchSpecificMood = () => {
         for (let i = 0; i < baseMoods.length; i++) {
@@ -22,8 +25,8 @@ const Questions = ({ base }) => {
                 <Listbox
                     as="div"
                     className="space-y-1"
-                    value={selected}
-                    onChange={setSelected}
+                    value={question}
+                    onChange={setQuestion}
                 >
                     {({ open }) => (
                         <>
@@ -33,7 +36,7 @@ const Questions = ({ base }) => {
                             <div className="relative">
                                 <span className="inline-block w-full rounded-md shadow-sm">
                                     <Listbox.Button className="cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                                        <span className="block truncate">{selected}</span>
+                                        <span className="block truncate">{question}</span>
                                         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                                             <svg
                                                 className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
@@ -91,7 +94,19 @@ const Questions = ({ base }) => {
                     )}
                 </Listbox>
             </div>
-            {selected !== 'Choose an Option' && <Slider />}
+            {question !== 'Choose an option' &&
+                <>
+                    <SliderComponent />
+                    <Link href='' className='flex justify-center mt-10'>
+                        <button className='flex flex-row bg-primary-blue-200 justify-center items-center button space-x-2 px-6 py-2 shadow-sm'>
+                            <h1 className='font-bold'>Fetch some fixes</h1>
+                            <Image src='/assets/wrench.png' className='object-contain' height={32} width={32} />
+                        </button>
+                    </Link>
+
+                </>
+
+            }
         </div>
 
     )
