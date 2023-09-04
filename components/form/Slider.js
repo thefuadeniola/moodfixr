@@ -4,8 +4,8 @@ import Slider from '@mui/material/Slider'
 import { useFormContext } from '@/context/formContext'
 
 const SliderComponent = () => {
-    const { numValue, setNumValue, base, question } = useFormContext()
-    console.log(`${base}, ${question}, ${numValue}`)
+    const { numValue, setNumValue } = useFormContext()
+
     return (
         <div className='w-full max-w-md mx-auto mt-8 flex flex-col items-center justify-center'>
             <h1
