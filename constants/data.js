@@ -42,7 +42,7 @@ export const baseMoods = [
         questions: {
             happy: "My current situation or the outcome of a recent situation",
             optimistic: "Looking forward to the positive outcome of a situation",
-            relaxed: "Confident in your current reality"
+            relaxed: "Confident in your current reality, relaxed"
         }
     },
     {
@@ -71,141 +71,6 @@ export const baseMoods = [
             anxious: "Do you think your current feeling is best explained as being a result of your anxiety",
         }
     },
-]
-const mappedMoods = [
-    {
-        id: 'stressed',
-        mood: 'Stressed',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'anxious',
-        mood: 'Anxious',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'frustrated',
-        mood: 'Frustrated',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'angry',
-        mood: 'Angry',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'nostalgic',
-        mood: 'Nostalgic',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'lonely',
-        mood: 'Lonely',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        mood: 'Sad',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'relaxed',
-        mood: 'Relaxed',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'happy',
-        mood: 'Happy',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'empowered',
-        mood: 'Empowered',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-    {
-        id: 'optimistic',
-        mood: 'Optimistic',
-        api_calls: [
-            {
-                spotify: '',
-                quote: '',
-                book: '',
-                podcast: ''
-            }
-        ]
-    },
-
-    //, "frustrated", "angry", "nostalgic", "lonely", "sad","relaxed", "happy", "empowered", "optimistic"
 ]
 
 export const podcastOptions = {
@@ -293,4 +158,86 @@ export const artisteOptions = {
         "Bon Iver", "Radiohead", "Sigur Rós", "Enya", "Explosions in the Sky"
     ]
 
+}
+export const playlistOptions = {
+    stressed: [
+        'instrumental', 'rnb'
+    ],
+    frustrated: [
+        'ambient', 'hiphop', 'focus'
+    ],
+    angry: [
+        'metal'
+    ],
+    nostalgic: [
+        'blues', 'country'
+    ],
+    lonely: [
+        'country'
+    ],
+    sad: [
+        'mood', 'country'
+    ],
+    relaxed: [
+        'rnb', 'sleep'
+    ],
+    happy: [
+        'summer', 'afro', 'party'
+    ],
+    empowered: [
+        'metal', 'pop', 'classical'
+    ],
+    optimistic: [
+        'afro', 'party', 'alternative'
+    ],
+    anxious: [
+        'chill'
+    ]
+
+}
+export const albumOptions = {
+    stressed: [
+        '1CEODgTmTwLyabvwd7HBty',
+        '4LH4d3cOWNNsVw41Gqt2kv'
+    ],
+    frustrated: [
+        '4LaRYkT4oy47wEuQgkLBul',
+        '7ycBtnsMtyVbbwTfJwRjSP'
+    ],
+    angry: [
+        '2Lq2qX3hYhiuPckC8Flj21',
+        '6t7956yu5zYf5A829XRiHC'
+    ],
+    nostalgic: [
+        '0BwWUstDMUbgq2NYONRqlu',
+        '097eYvf9NKjFnv4xA9s2oV'
+    ],
+    lonely: [
+        '7EJ0OT5ZqybXxcYRa6mccM',
+        '5duyQokC4FMcWPYTV9Gpf9'
+    ],
+    sad: [
+        '0ptlfJfwGTy0Yvrk14JK1I',
+        '097eYvf9NKjFnv4xA9s2oV'
+    ],
+    relaxed: [
+        '7Eoz7hJvaX1eFkbpQxC5PA',
+        '748dZDqSZy6aPXKcI9H80u'
+    ],
+    happy: [
+        '2ZytN2cY4Zjrr9ukb2rqTP',
+        '4WrDwO2xf0pxNmrQpb7e5q'
+    ],
+    empowered: [
+        '2cWBwpqMsDJC1ZUwz813lo',
+        '28Pt7Q4ikXNPOEbtGnKlFA'
+    ],
+    optimistic: [
+        '7dK54iZuOxXFarGhXwEXfF',
+        '6QaVfG1pHYl1z15ZxkvVDW'
+    ],
+    anxious: [
+        '6dVIqQ8qmQ5GBnJ9shOYGE',
+        '748dZDqSZy6aPXKcI9H80u'
+    ]
 }

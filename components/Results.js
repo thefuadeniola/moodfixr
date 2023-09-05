@@ -1,9 +1,8 @@
 'use client'
-import { podcastOptions, artisteOptions } from "@/constants/data"
-import { baseMoods } from "@/constants/data"
+import { podcastOptions, artisteOptions, albumOptions, playlistOptions } from "@/constants/data"
 import React from 'react'
 import { useFormContext } from '@/context/formContext'
-import { setMood, decideApi, } from '@/lib/utils/searchObject'
+import { setMood } from '@/lib/utils/searchObject'
 import Loading from "./looadingstate/Loading"
 import Suggestions from "./looadingstate/Suggestions"
 
@@ -31,9 +30,9 @@ const Results = () => {
         if (sliderValue <= 4) {
             decideMusicByArtiste(mood)
         } else if (sliderValue > 4 && sliderValue <= 7) {
-            fetchMusicByAlbum(mood)
+            decideMusicByAlbum(mood)
         } else {
-            fetchPlaylist(mood)
+            decideMusicByPlaylist(mood)
         }
     }
 
@@ -77,16 +76,43 @@ const Results = () => {
             findMusicByArtiste(searchArtiste)
         }
     }
+    function decideMusicByAlbum(mood) {
+        let specificAlbums = []
+        Object.entries(albumOptions).map((albumOption) => {
+            if (albumOption[0] == mood) {
+                specificAlbums = albumOption[1]
+            }
+        })
+        const random = Math.floor(Math.random() * (specificArtistes.length))
+        let searchAlbum = specificArtistes[random]
+        if (searchAlbum) {
+            fetchAlbum(searchAlbum)
+        }
+    }
+    function decideMusicByPlaylist(mood) {
+        let specificPlaylists = []
+        Object.entries(playlistOptions).map((playlistOption) => {
+            if (playlistOption[0] == mood) {
+                specificPlaylists = playlistOption[1]
+            }
+        })
+        const random = Math.floor(Math.random() * (specificPlaylists.length))
+        let searchPlaylist = specificPlaylists[random]
+        if (searchPlaylist) {
+            fetchPlaylist(searchPlaylist)
+        }
+    }
+
 
     function findMusicByArtiste(string) {
         // API CALL
     }
 
-    function fetchMusicByAlbum(mood) {
-
+    function fetchAlbum(mood) {
+        // API CALL
     }
     function fetchPlaylist(mood) {
-
+        // API CALL
     }
 
 
