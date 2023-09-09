@@ -97,13 +97,6 @@ const Questions = ({ base }) => {
             {question !== 'Choose an option' &&
                 <>
                     <SliderComponent />
-                    <Link href='/mood/shs' className='flex justify-center mt-10'>
-                        <button className='flex flex-row bg-primary-blue-200 justify-center items-center button space-x-2 px-6 py-2 shadow-sm'>
-                            <h1 className='font-bold'>Fetch some fixes</h1>
-                            <Image src='/assets/wrench.png' alt='wrench' className='object-contain' height={32} width={32} />
-                        </button>
-                    </Link>
-
                 </>
 
             }
